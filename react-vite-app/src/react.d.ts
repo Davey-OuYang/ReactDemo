@@ -3,6 +3,8 @@ declare module 'react' {
   export = React;
   namespace React {
     export type FC<P = {}> = (props: P) => any;
+    export type ReactNode = any;
+    export type FormEvent<T = HTMLElement> = any;
   }
 }
 
