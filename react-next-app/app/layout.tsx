@@ -28,6 +28,7 @@ export default function RootLayout({
       <body
         className="bg-amber-200"
       >
+        <div>全局layout</div>
         {children}
       </body>
     </html>

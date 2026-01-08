@@ -2,11 +2,11 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function proxy(request: NextRequest) {
+
   const { pathname } = request.nextUrl;
   
   // 获取 cookie 中的 isAuth 值
   const isAuth = request.cookies.get('isAuth')?.value;
-
   // 如果访问的是登录页面，且已经登录，重定向到 Home
   if (pathname === '/login') {
     if (isAuth === 'true') {
